@@ -1,9 +1,9 @@
 from functools import singledispatch
-from types import ModuleType
+from types import ModuleType, FunctionType
 from typing import Any, Callable, List
 
 from examples import registry
-from examples.example import CallableExample
+from examples.example_objects import CallableExample
 
 
 def example(*args, **kwargs) -> Callable:
@@ -43,7 +43,7 @@ def get_examples(item: Any) -> List[CallableExample]:
 
 
 @get_examples.register
-def _get_examples_callable(item: Callable) -> List[CallableExample]:
+def _get_examples_callable(item: FunctionType) -> List[CallableExample]:
     """Returns all examples registered for a function"""
     module_examples = registry.module_registry.get(item.__module__, None)
     if not module_examples:
@@ -95,7 +95,7 @@ def _verify_module_signatures(item: ModuleType, verify_types: bool = True) -> No
 
 
 @verify_signatures.register
-def _verify_function_signature(item: Callable, verify_types: bool = True) -> None:
+def _verify_function_signature(item: FunctionType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
     examples = get_examples(item)
     if not examples:
@@ -138,7 +138,7 @@ def _test_module_examples(item: ModuleType, verify_return_type: bool = True) -> 
 
 
 @verify_signatures.register
-def _test_function_examples(item: ModuleType, verify_return_type: bool = True) -> None:
+def _test_function_examples(item: FunctionType, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided function."""
     examples = get_examples(item)
     if not examples:
@@ -182,7 +182,7 @@ def _verify_and_test_module_examples(item: ModuleType, verify_types: bool = True
 
 
 @verify_signatures.register
-def _verify_and_test_function_examples(item: Callable, verify_types: bool = True) -> None:
+def _verify_and_test_function_examples(item: FunctionType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
     examples = get_examples(item)
     if not examples:

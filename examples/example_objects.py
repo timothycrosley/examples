@@ -74,8 +74,12 @@ class CallableExample:
         self.test(verify_return_type=verify_types)
 
     def __str__(self):
-        bound_repr = str(self._bound()).replace("<BoundArguments ", "", 1).rstrip(">")
-        call_str = f"{self.callable_object.__name__}({bound_repr})"
+        arg_str = ", ".join(repr(arg) for arg in self.args)
+        if self.kwargs:
+            arg_str += ", " if arg_str else ""
+            arg_str += ", ".join(f"{name}={repr(value)}" for name, value in self.kwargs.items())
+
+        call_str = f"{self.callable_object.__name__}({arg_str})"
         if self.returns is not NotDefined:
             call_str += f" == {self.returns}"
-        return call_str
+        return f"`{call_str}`"
