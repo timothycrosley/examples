@@ -62,7 +62,7 @@ def _get_examples_module_name(item: str) -> List[CallableExample]:
 @get_examples.register
 def _get_examples_module(item: ModuleType) -> List[CallableExample]:
     """Returns all examples registered to a module"""
-    return _get_examples_module_name(item.__name__)
+    return _get_examples_module_name(item.__name__)  # type: ignore
 
 
 @singledispatch
@@ -91,7 +91,7 @@ def _verify_module_name_signatures(item: str, verify_types: bool = True) -> None
 @verify_signatures.register
 def _verify_module_signatures(item: ModuleType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
-    _verify_module_name_signatures(item.__name__, verify_types=verify_types)
+    _verify_module_name_signatures(item.__name__, verify_types=verify_types)  # type: ignore
 
 
 @verify_signatures.register
@@ -113,8 +113,8 @@ def test_examples(item: Any, verify_return_type: bool = True) -> None:
     """Run all examples verifying they work as defined against the associated function.
        Provided item should be of type function, module, or module name.
 
-       - *verify_return_type*: If `True` all examples will have have their return value types checked against
-         their associated functions type annotations.
+       - *verify_return_type*: If `True` all examples will have have their return value types
+         checked against their associated functions type annotations.
     """
     raise NotImplementedError(f"Currently examples can not be attached to {type(item)}.")
 
@@ -134,7 +134,7 @@ def _test_module_name_examples(item: str, verify_return_type: bool = True) -> No
 @verify_signatures.register
 def _test_module_examples(item: ModuleType, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided module."""
-    _test_module_name_examples(item.__name__, verify_return_type=verify_return_type)
+    _test_module_name_examples(item.__name__, verify_return_type=verify_return_type)  # type: ignore
 
 
 @verify_signatures.register
@@ -178,7 +178,7 @@ def _verify_and_test_module_name_examples(item: str, verify_types: bool = True) 
 @verify_signatures.register
 def _verify_and_test_module_examples(item: ModuleType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
-    _verify_and_test_module_name_examples(item.__name__, verify_types=verify_types)
+    _verify_and_test_module_name_examples(item.__name__, verify_types=verify_types)  # type: ignore
 
 
 @verify_signatures.register

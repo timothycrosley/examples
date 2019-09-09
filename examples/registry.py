@@ -9,7 +9,7 @@ class Examples:
     __slots__ = ("examples", "add_to_doc_strings", "_callable_mapping")
 
     def __init__(self, add_to_doc_strings: bool = True):
-        self.examples: list = []
+        self.examples: List[CallableExample] = []
         self.add_to_doc_strings: bool = add_to_doc_strings
         self._callable_mapping: Dict[Callable, list] = {}
 
