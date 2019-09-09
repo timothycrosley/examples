@@ -5,21 +5,30 @@ from pydantic import create_model
 
 
 class NotDefined:
+    """This exists to allow distinctly checking for a parameter not passed in
+       vs. one that is passed in as None.
+    """
+
     pass
 
 
 class CallableExample:
     """Defines a single Example call against a callable."""
 
-    def __init__(self, callable_object: Callable, args, kwargs, returns=NotDefined):
+    __slots__ = ("args", "kwargs", "callable_object", "returns")
+
+    def __init__(self, callable_object: Callable, args, kwargs, returns: Any = NotDefined):
         self.args = args
         self.kwargs = kwargs
         self.callable_object = callable_object
         self.returns = returns
 
+    def _bound(self):
+        return inspect.signature(self.callable_object).bind(*self.args, **self.kwargs)
+
     def verify_signature(self, verify_types: bool = True):
         """Verifies that the example makes sense against the functions signature."""
-        bound = inspect.signature(self.callable_object).bind(*self.args, **self.kwargs)
+        bound = self._bound()
 
         annotations = get_type_hints(self.callable_object)
         if verify_types and annotations:
@@ -63,3 +72,10 @@ class CallableExample:
     def verify_and_test(self, verify_types: bool = True) -> None:
         self.verify_signature(verify_types=verify_types)
         self.test(verify_return_type=verify_types)
+
+    def __str__(self):
+        bound_repr = str(self._bound()).replace("<BoundArguments ", "", 1).rstrip(">")
+        call_str = f"{self.callable_object.__name__}({bound_repr})"
+        if self.returns is not NotDefined:
+            call_str += f" == {self.returns}"
+        return call_str
