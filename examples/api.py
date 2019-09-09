@@ -119,7 +119,7 @@ def test_examples(item: Any, verify_return_type: bool = True) -> None:
     raise NotImplementedError(f"Currently examples can not be attached to {type(item)}.")
 
 
-@verify_signatures.register
+@test_examples.register
 def _test_module_name_examples(item: str, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided module name."""
     module_examples = registry.module_registry.get(item, None)
@@ -131,13 +131,13 @@ def _test_module_name_examples(item: str, verify_return_type: bool = True) -> No
     module_examples.test_examples(verify_return_type=verify_return_type)
 
 
-@verify_signatures.register
+@test_examples.register
 def _test_module_examples(item: ModuleType, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided module."""
     _test_module_name_examples(item.__name__, verify_return_type=verify_return_type)  # type: ignore
 
 
-@verify_signatures.register
+@test_examples.register
 def _test_function_examples(item: FunctionType, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided function."""
     examples = get_examples(item)
@@ -163,7 +163,7 @@ def verify_and_test_examples(item: Any, verify_return_type: bool = True) -> None
     raise NotImplementedError(f"Currently examples can not be attached to {type(item)}.")
 
 
-@verify_signatures.register
+@verify_and_test_examples.register
 def _verify_and_test_module_name_examples(item: str, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module name."""
     module_examples = registry.module_registry.get(item, None)
@@ -175,13 +175,13 @@ def _verify_and_test_module_name_examples(item: str, verify_types: bool = True) 
     module_examples.verify_and_test_examples(verify_types=verify_types)
 
 
-@verify_signatures.register
+@verify_and_test_examples.register
 def _verify_and_test_module_examples(item: ModuleType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
     _verify_and_test_module_name_examples(item.__name__, verify_types=verify_types)  # type: ignore
 
 
-@verify_signatures.register
+@verify_and_test_examples.register
 def _verify_and_test_function_examples(item: FunctionType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
     examples = get_examples(item)
