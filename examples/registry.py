@@ -1,6 +1,6 @@
 from typing import Any, Callable, Dict, List
 
-from examples.example import CallableExample
+from examples.example_objects import CallableExample
 
 
 class Examples:
