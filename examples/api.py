@@ -1,5 +1,5 @@
 from functools import singledispatch
-from types import ModuleType, FunctionType
+from types import FunctionType, ModuleType
 from typing import Any, Callable, List
 
 from examples import registry

@@ -23,12 +23,9 @@ class CallableExample:
         self.callable_object = callable_object
         self.returns = returns
 
-    def _bound(self):
-        return inspect.signature(self.callable_object).bind(*self.args, **self.kwargs)
-
     def verify_signature(self, verify_types: bool = True):
         """Verifies that the example makes sense against the functions signature."""
-        bound = self._bound()
+        bound = inspect.signature(self.callable_object).bind(*self.args, **self.kwargs)
 
         annotations = get_type_hints(self.callable_object)
         if verify_types and annotations:
@@ -63,10 +60,10 @@ class CallableExample:
 
         if verify_return_type:
             type_hints = get_type_hints(self.callable_object)
-            if type_hints and "returns" in type_hints:
+            if type_hints and "return" in type_hints:
                 create_model(  # type: ignore
                     getattr(self.callable_object, "__name__", "ExamplesModel"),
-                    {"returns": type_hints["returns"]},
+                    returns=type_hints["return"],
                 )(returns=result)
 
     def verify_and_test(self, verify_types: bool = True) -> None:
