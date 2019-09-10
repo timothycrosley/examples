@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pyzample"
+version = "1.0.0"
+description = "Tests and Documentation Done by Example. An alias for the project `examples` with better SEO opportunities"
+authors = ["Timothy Crosley <timothy.crosley@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+examples = "^0.0.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
