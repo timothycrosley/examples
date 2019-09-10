@@ -31,10 +31,12 @@ class Examples:
 
         function.__doc__ += f"{indent_spaces}- {example}"
 
-    def example(self, *args, _example_returns=NotDefined, **kwargs) -> Callable:
+    def example(
+        self, *args, _example_returns=NotDefined, _example_raises=None, **kwargs
+    ) -> Callable:
         def example_wrapper(function):
             new_example = CallableExample(
-                function, returns=_example_returns, args=args, kwargs=kwargs
+                function, returns=_example_returns, raises=_example_raises, args=args, kwargs=kwargs
             )
             self._callable_mapping.setdefault(function, []).append(new_example)
             self._add_to_doc_string(function, new_example)

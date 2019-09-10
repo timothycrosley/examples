@@ -6,15 +6,28 @@ from examples import registry
 from examples.example_objects import CallableExample, NotDefined
 
 
-def example(*args, _example_returns: Any = NotDefined, **kwargs) -> Callable:
-    """A decorator that adds an example to the decorated function."""
+def example(
+    *args, _example_returns: Any = NotDefined, _example_raises: Any = None, **kwargs
+) -> Callable:
+    """A decorator that adds an example to the decorated function.
+
+    Everything passed in to the example will be passed into the wrapped function in the
+    unchanged when testing or using the example.
+
+    Except, for the following magic parameters (all prefixed with `_example_`):
+
+    - *_example_returns*: The exact result you expect the example to return
+    - *_example_raises*: An exception you expect the example to raise (can't be combined with above)
+    """
 
     def wrap_example(function: Callable) -> Callable:
         attached_module_name = function.__module__
         if attached_module_name not in registry.module_registry:
             registry.module_registry[attached_module_name] = registry.Examples()
         module_registry = registry.module_registry[attached_module_name]
-        return module_registry.example(*args, _example_returns=_example_returns, **kwargs)(function)
+        return module_registry.example(
+            *args, _example_returns=_example_returns, _example_raises=_example_raises, **kwargs
+        )(function)
 
     return wrap_example
 

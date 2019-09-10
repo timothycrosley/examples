@@ -15,13 +15,18 @@ class NotDefined:
 class CallableExample:
     """Defines a single Example call against a callable."""
 
-    __slots__ = ("args", "kwargs", "callable_object", "returns")
+    __slots__ = ("args", "kwargs", "callable_object", "returns", "raises")
 
-    def __init__(self, callable_object: Callable, args, kwargs, returns: Any = NotDefined):
+    def __init__(
+        self, callable_object: Callable, args, kwargs, returns: Any = NotDefined, raises: Any = None
+    ):
         self.args = args
         self.kwargs = kwargs
         self.callable_object = callable_object
+        if raises and returns is not NotDefined:
+            raise ValueError("Cannot specify both raises and returns on a single example.")
         self.returns = returns
+        self.raises = raises
 
     def verify_signature(self, verify_types: bool = True):
         """Verifies that the example makes sense against the functions signature."""
@@ -50,8 +55,31 @@ class CallableExample:
 
     def test(self, verify_return_type: bool = True):
         """Tests the given example, ensuring the return value matches that specified."""
-        result = self.use()
-        if self.returns is not NotDefined:
+        try:
+            result = self.use()
+        except BaseException as exception:
+            if not self.raises:
+                raise
+
+            if (type(self.raises) == type and not isinstance(exception, self.raises)) or (
+                type(self.raises) != type
+                and (
+                    not isinstance(exception, type(self.raises))
+                    or self.raises.args != exception.args
+                )
+            ):
+                raise AssertionError(
+                    f"Example expected {repr(self.raises)} to be raised but "
+                    f"instead {repr(exception)} was raised"
+                )
+            return
+
+        if self.raises:
+            raise AssertionError(
+                f"Example expected {repr(self.raises)} to be raised "
+                f"but instead {repr(result)} was returned"
+            )
+        elif self.returns is not NotDefined:
             if result != self.returns:
                 raise AssertionError(
                     f"Example's expected return value of '{self.returns}' "

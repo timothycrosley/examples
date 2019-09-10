@@ -141,3 +141,41 @@ def test_verify_and_test_all_examples():
         api.verify_and_test_all_examples()
     with pytest.raises(Exception):
         api.verify_and_test_all_examples(verify_types=False)
+
+
+def test_cant_specify_both_returns_and_raises():
+    with pytest.raises(ValueError):
+
+        @api.example(_example_raises=ValueError, _example_returns=True)
+        def my_function():
+            pass
+
+
+def test_wrong_exception_type():
+    with pytest.raises(AssertionError):
+
+        @api.example(_example_raises=ValueError)
+        def my_example():
+            raise NotImplementedError("This isn't implemented")
+
+        api.verify_and_test_examples(my_example)
+
+
+def test_wrong_exception_args():
+    with pytest.raises(AssertionError):
+
+        @api.example(_example_raises=ValueError("Unexpected Value"))
+        def my_new_example():
+            raise ValueError("Expected Value")
+
+        api.verify_and_test_examples(my_new_example)
+
+
+def test_return_instead_of_exception():
+    with pytest.raises(AssertionError):
+
+        @api.example(_example_raises=ValueError("Unexpected Value"))
+        def my_third_example():
+            return True
+
+        api.verify_and_test_examples(my_third_example)

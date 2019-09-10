@@ -12,3 +12,9 @@ def add(number_1: int, number_2: int = 1) -> int:
 @example(2, 2)
 def multiply(number_1: int, number_2: int) -> int:
     return number_1 * number_2
+
+
+@example(1, 1, _example_raises=NotImplementedError)
+@example(1, 2, _example_raises=NotImplementedError("No division support! This is just an POC."))
+def divide(number_1: int, number_2: int):
+    return number_1 / number_2
