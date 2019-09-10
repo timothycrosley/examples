@@ -15,9 +15,6 @@ class Examples:
         self._callable_mapping: Dict[Callable, list] = {}
 
     def _add_to_doc_string(self, function: Callable, example: CallableExample) -> None:
-        if not self.add_to_doc_strings:
-            return
-
         if function.__doc__ is None:
             function.__doc__ = ""
 
@@ -34,14 +31,20 @@ class Examples:
         function.__doc__ += f"{indent_spaces}-\n{indent_spaces}        {indented_example}"
 
     def example(
-        self, *args, _example_returns=NotDefined, _example_raises=None, **kwargs
+        self,
+        *args,
+        _example_returns=NotDefined,
+        _example_raises=None,
+        _example_doc_string=None,
+        **kwargs,
     ) -> Callable:
         def example_wrapper(function):
             new_example = CallableExample(
                 function, returns=_example_returns, raises=_example_raises, args=args, kwargs=kwargs
             )
             self._callable_mapping.setdefault(function, []).append(new_example)
-            self._add_to_doc_string(function, new_example)
+            if _example_doc_string or (_example_doc_string is None and self.add_to_doc_strings):
+                self._add_to_doc_string(function, new_example)
             self.examples.append(new_example)
             return function
 

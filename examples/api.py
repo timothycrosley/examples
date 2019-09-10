@@ -1,13 +1,17 @@
 from functools import singledispatch
 from types import FunctionType, ModuleType
-from typing import Any, Callable, List
+from typing import Any, Callable, List, Optional
 
 from examples import registry
 from examples.example_objects import CallableExample, NotDefined
 
 
 def example(
-    *args, _example_returns: Any = NotDefined, _example_raises: Any = None, **kwargs
+    *args,
+    _example_returns: Any = NotDefined,
+    _example_raises: Any = None,
+    _example_doc_string: bool = True,
+    **kwargs,
 ) -> Callable:
     """A decorator that adds an example to the decorated function.
 
@@ -16,8 +20,9 @@ def example(
 
     Except, for the following magic parameters (all prefixed with `_example_`):
 
-    - *_example_returns*: The exact result you expect the example to return
+    - *_example_returns*: The exact result you expect the example to return.
     - *_example_raises*: An exception you expect the example to raise (can't be combined with above)
+    - *_example_doc_string*: If True example is added to the functions doc string.
     """
 
     def wrap_example(function: Callable) -> Callable:
