@@ -1,0 +1,1235 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Example Objects - examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-examplesexample_objects" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="examples" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              examples
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Example Objects
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/timothycrosley/examples.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    timothycrosley/examples
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="examples" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    examples
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/timothycrosley/examples.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    timothycrosley/examples
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Example Objects
+      </label>
+    
+    <a href="./" title="Example Objects" class="md-nav__link md-nav__link--active">
+      Example Objects
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#callableexample" class="md-nav__link">
+    CallableExample
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use" class="md-nav__link">
+    use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_and_test" class="md-nav__link">
+    verify_and_test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_signature" class="md-nav__link">
+    verify_signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notdefined" class="md-nav__link">
+    NotDefined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registry/" title="Registry" class="md-nav__link">
+      Registry
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#callableexample" class="md-nav__link">
+    CallableExample
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use" class="md-nav__link">
+    use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_and_test" class="md-nav__link">
+    verify_and_test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_signature" class="md-nav__link">
+    verify_signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notdefined" class="md-nav__link">
+    NotDefined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/timothycrosley/examples.git/edit/master/docs/reference/examples/example_objects.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-examplesexample_objects">Module examples.example_objects</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">get_type_hints</span>
+
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">create_model</span>
+
+<span class="k">class</span> <span class="nc">NotDefined</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;This exists to allow distinctly checking for a parameter not passed in</span>
+
+<span class="sd">       vs. one that is passed in as None.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">CallableExample</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;Defines a single Example call against a callable.&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;args&quot;</span><span class="p">,</span> <span class="s2">&quot;kwargs&quot;</span><span class="p">,</span> <span class="s2">&quot;callable_object&quot;</span><span class="p">,</span> <span class="s2">&quot;returns&quot;</span><span class="p">,</span> <span class="s2">&quot;raises&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+
+        <span class="bp">self</span><span class="p">,</span> <span class="n">callable_object</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">returns</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">NotDefined</span><span class="p">,</span> <span class="n">raises</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span> <span class="o">=</span> <span class="n">callable_object</span>
+
+        <span class="k">if</span> <span class="n">raises</span> <span class="ow">and</span> <span class="n">returns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotDefined</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot specify both raises and returns on a single example.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">returns</span> <span class="o">=</span> <span class="n">returns</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">raises</span> <span class="o">=</span> <span class="n">raises</span>
+
+    <span class="k">def</span> <span class="nf">verify_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verify_types</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;Verifies that the example makes sense against the functions signature.&quot;&quot;&quot;</span>
+
+        <span class="n">bound</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="n">annotations</span> <span class="o">=</span> <span class="n">get_type_hints</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">verify_types</span> <span class="ow">and</span> <span class="n">annotations</span><span class="p">:</span>
+
+            <span class="n">test_type_hints</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="n">typed_example_values</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="k">for</span> <span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameter_value</span> <span class="ow">in</span> <span class="n">bound</span><span class="o">.</span><span class="n">arguments</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+                <span class="n">type_hint</span> <span class="o">=</span> <span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+                <span class="n">test_type_hints</span><span class="p">[</span><span class="n">parameter_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">type_hint</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+                <span class="n">typed_example_values</span><span class="p">[</span><span class="n">parameter_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parameter_value</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotDefined</span> <span class="ow">and</span> <span class="s2">&quot;return&quot;</span> <span class="ow">in</span> <span class="n">annotations</span><span class="p">:</span>
+
+                <span class="n">test_type_hints</span><span class="p">[</span><span class="s2">&quot;return&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="s2">&quot;return&quot;</span><span class="p">]</span>
+
+                <span class="n">typed_example_values</span><span class="p">[</span><span class="s2">&quot;returns&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">returns</span>
+
+            <span class="n">create_model</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">,</span> <span class="s2">&quot;__name__&quot;</span><span class="p">,</span> <span class="s2">&quot;ExamplesModel&quot;</span><span class="p">),</span> <span class="o">**</span><span class="n">test_type_hints</span>
+
+            <span class="p">)(</span><span class="o">**</span><span class="n">typed_example_values</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot;Runs the given example, giving back the result returned from running the example call.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verify_return_type</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;Tests the given example, ensuring the return value matches that specified.&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">use</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">:</span>
+
+                <span class="k">raise</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span>
+
+                <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">type</span>
+
+                <span class="ow">and</span> <span class="p">(</span>
+
+                    <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">))</span>
+
+                    <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="o">.</span><span class="n">args</span> <span class="o">!=</span> <span class="n">exception</span><span class="o">.</span><span class="n">args</span>
+
+                <span class="p">)</span>
+
+            <span class="p">):</span>
+
+                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+
+                    <span class="n">f</span><span class="s2">&quot;Example expected {repr(self.raises)} to be raised but &quot;</span>
+
+                    <span class="n">f</span><span class="s2">&quot;instead {repr(exception)} was raised&quot;</span>
+
+                <span class="p">)</span>
+
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;Example expected {repr(self.raises)} to be raised &quot;</span>
+
+                <span class="n">f</span><span class="s2">&quot;but instead {repr(result)} was returned&quot;</span>
+
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">returns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotDefined</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">returns</span><span class="p">:</span>
+
+                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+
+                    <span class="n">f</span><span class="s2">&quot;Example&#39;s expected return value of &#39;{self.returns}&#39; &quot;</span>
+
+                    <span class="n">f</span><span class="s2">&quot;does not not match actual return value of `{result}`&quot;</span>
+
+                <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">verify_return_type</span><span class="p">:</span>
+
+            <span class="n">type_hints</span> <span class="o">=</span> <span class="n">get_type_hints</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">type_hints</span> <span class="ow">and</span> <span class="s2">&quot;return&quot;</span> <span class="ow">in</span> <span class="n">type_hints</span><span class="p">:</span>
+
+                <span class="n">create_model</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+
+                    <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">callable_object</span><span class="p">,</span> <span class="s2">&quot;__name__&quot;</span><span class="p">,</span> <span class="s2">&quot;ExamplesModel&quot;</span><span class="p">),</span>
+
+                    <span class="n">returns</span><span class="o">=</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;return&quot;</span><span class="p">],</span>
+
+                <span class="p">)(</span><span class="n">returns</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">verify_and_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verify_types</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">verify_signature</span><span class="p">(</span><span class="n">verify_types</span><span class="o">=</span><span class="n">verify_types</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">verify_return_type</span><span class="o">=</span><span class="n">verify_types</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">arg_str</span> <span class="o">=</span> <span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">    &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">:</span>
+
+            <span class="n">arg_str</span> <span class="o">+=</span> <span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">    &quot;</span> <span class="k">if</span> <span class="n">arg_str</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="n">arg_str</span> <span class="o">+=</span> <span class="s2">&quot;,</span><span class="se">\n</span><span class="s2">    &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;{name}={repr(value)}&quot;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+
+            <span class="p">)</span>
+
+        <span class="n">call_str</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;{self.callable_object.__name__}(</span><span class="se">\n</span><span class="s2">    {arg_str}</span><span class="se">\n</span><span class="s2">)&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotDefined</span><span class="p">:</span>
+
+            <span class="n">call_str</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> == </span><span class="se">\n</span><span class="s2">{pformat(self.returns)}&quot;</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">raises</span><span class="p">:</span>
+
+            <span class="n">call_str</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">raises {pformat(self.raises)}&quot;</span>
+
+        <span class="k">return</span> <span class="n">call_str</span>
+</pre></div>
+
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="callableexample">CallableExample</h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">CallableExample</span><span class="p">(</span>
+    <span class="n">callable_object</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">args</span><span class="p">,</span>
+    <span class="n">kwargs</span><span class="p">,</span>
+    <span class="n">returns</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">examples</span><span class="o">.</span><span class="n">example_objects</span><span class="o">.</span><span class="n">NotDefined</span><span class="s1">&#39;&gt;,</span>
+    <span class="n">raises</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Defines a single Example call against a callable.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">class</span> <span class="nv">CallableExample</span>:
+
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">Defines a single Example call against a callable.</span><span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="nv">__slots__</span> <span class="o">=</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">args</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">kwargs</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">callable_object</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">returns</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">raises</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span>
+
+        <span class="nv">self</span>, <span class="nv">callable_object</span>: <span class="nv">Callable</span>, <span class="nv">args</span>, <span class="nv">kwargs</span>, <span class="nv">returns</span>: <span class="nv">Any</span> <span class="o">=</span> <span class="nv">NotDefined</span>, <span class="nv">raises</span>: <span class="nv">Any</span> <span class="o">=</span> <span class="nv">None</span>
+
+    <span class="ss">)</span>:
+
+        <span class="nv">self</span>.<span class="nv">args</span> <span class="o">=</span> <span class="nv">args</span>
+
+        <span class="nv">self</span>.<span class="nv">kwargs</span> <span class="o">=</span> <span class="nv">kwargs</span>
+
+        <span class="nv">self</span>.<span class="nv">callable_object</span> <span class="o">=</span> <span class="nv">callable_object</span>
+
+        <span class="k">if</span> <span class="nv">raises</span> <span class="nv">and</span> <span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span>:
+
+            <span class="nv">raise</span> <span class="nv">ValueError</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Cannot specify both raises and returns on a single example.</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+        <span class="nv">self</span>.<span class="nv">returns</span> <span class="o">=</span> <span class="nv">returns</span>
+
+        <span class="nv">self</span>.<span class="nv">raises</span> <span class="o">=</span> <span class="nv">raises</span>
+
+    <span class="nv">def</span> <span class="nv">verify_signature</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">verify_types</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span><span class="ss">)</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Verifies that the example makes sense against the functions signature.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="nv">bound</span> <span class="o">=</span> <span class="nv">inspect</span>.<span class="nv">signature</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>.<span class="nv">bind</span><span class="ss">(</span><span class="o">*</span><span class="nv">self</span>.<span class="nv">args</span>, <span class="o">**</span><span class="nv">self</span>.<span class="nv">kwargs</span><span class="ss">)</span>
+
+        <span class="nv">annotations</span> <span class="o">=</span> <span class="nv">get_type_hints</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>
+
+        <span class="k">if</span> <span class="nv">verify_types</span> <span class="nv">and</span> <span class="nv">annotations</span>:
+
+            <span class="nv">test_type_hints</span> <span class="o">=</span> {}
+
+            <span class="nv">typed_example_values</span> <span class="o">=</span> {}
+
+            <span class="k">for</span> <span class="nv">parameter_name</span>, <span class="nv">parameter_value</span> <span class="nv">in</span> <span class="nv">bound</span>.<span class="nv">arguments</span>.<span class="nv">items</span><span class="ss">()</span>:
+
+                <span class="nv">type_hint</span> <span class="o">=</span> <span class="nv">annotations</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">parameter_name</span>, <span class="nv">None</span><span class="ss">)</span>
+
+                <span class="nv">test_type_hints</span>[<span class="nv">parameter_name</span>] <span class="o">=</span> <span class="ss">(</span><span class="nv">type_hint</span>, <span class="nv">None</span><span class="ss">)</span>
+
+                <span class="nv">typed_example_values</span>[<span class="nv">parameter_name</span>] <span class="o">=</span> <span class="nv">parameter_value</span>
+
+            <span class="k">if</span> <span class="nv">self</span>.<span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span> <span class="nv">and</span> <span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span> <span class="nv">in</span> <span class="nv">annotations</span>:
+
+                <span class="nv">test_type_hints</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>] <span class="o">=</span> <span class="nv">annotations</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>]
+
+                <span class="nv">typed_example_values</span>[<span class="s2">&quot;</span><span class="s">returns</span><span class="s2">&quot;</span>] <span class="o">=</span> <span class="nv">self</span>.<span class="nv">returns</span>
+
+            <span class="nv">create_model</span><span class="ss">(</span>  # <span class="nv">type</span>: <span class="nv">ignore</span>
+
+                <span class="nv">getattr</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span>, <span class="s2">&quot;</span><span class="s">__name__</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">ExamplesModel</span><span class="s2">&quot;</span><span class="ss">)</span>, <span class="o">**</span><span class="nv">test_type_hints</span>
+
+            <span class="ss">)(</span><span class="o">**</span><span class="nv">typed_example_values</span><span class="ss">)</span>
+
+    <span class="nv">def</span> <span class="nv">use</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">Any</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Runs the given example, giving back the result returned from running the example call.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">(</span><span class="o">*</span><span class="nv">self</span>.<span class="nv">args</span>, <span class="o">**</span><span class="nv">self</span>.<span class="nv">kwargs</span><span class="ss">)</span>
+
+    <span class="nv">def</span> <span class="nv">test</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">verify_return_type</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span><span class="ss">)</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Tests the given example, ensuring the return value matches that specified.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="nv">try</span>:
+
+            <span class="nb">result</span> <span class="o">=</span> <span class="nv">self</span>.<span class="nv">use</span><span class="ss">()</span>
+
+        <span class="nv">except</span> <span class="nv">BaseException</span> <span class="nv">as</span> <span class="nv">exception</span>:
+
+            <span class="k">if</span> <span class="nv">not</span> <span class="nv">self</span>.<span class="nv">raises</span>:
+
+                <span class="nv">raise</span>
+
+            <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">)</span> <span class="o">==</span> <span class="nv">type</span> <span class="nv">and</span> <span class="nv">not</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">exception</span>, <span class="nv">self</span>.<span class="nv">raises</span><span class="ss">))</span> <span class="nv">or</span> <span class="ss">(</span>
+
+                <span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">)</span> <span class="o">!=</span> <span class="nv">type</span>
+
+                <span class="nv">and</span> <span class="ss">(</span>
+
+                    <span class="nv">not</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">exception</span>, <span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">))</span>
+
+                    <span class="nv">or</span> <span class="nv">self</span>.<span class="nv">raises</span>.<span class="nv">args</span> <span class="o">!=</span> <span class="nv">exception</span>.<span class="nv">args</span>
+
+                <span class="ss">)</span>
+
+            <span class="ss">)</span>:
+
+                <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example expected {repr(self.raises)} to be raised but </span><span class="s2">&quot;</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">instead {repr(exception)} was raised</span><span class="s2">&quot;</span>
+
+                <span class="ss">)</span>
+
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="nv">self</span>.<span class="nv">raises</span>:
+
+            <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example expected {repr(self.raises)} to be raised </span><span class="s2">&quot;</span>
+
+                <span class="nv">f</span><span class="s2">&quot;</span><span class="s">but instead {repr(result)} was returned</span><span class="s2">&quot;</span>
+
+            <span class="ss">)</span>
+
+        <span class="nv">elif</span> <span class="nv">self</span>.<span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span>:
+
+            <span class="k">if</span> <span class="nb">result</span> <span class="o">!=</span> <span class="nv">self</span>.<span class="nv">returns</span>:
+
+                <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example&#39;s expected return value of &#39;{self.returns}&#39; </span><span class="s2">&quot;</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">does not not match actual return value of `{result}`</span><span class="s2">&quot;</span>
+
+                <span class="ss">)</span>
+
+        <span class="k">if</span> <span class="nv">verify_return_type</span>:
+
+            <span class="nv">type_hints</span> <span class="o">=</span> <span class="nv">get_type_hints</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>
+
+            <span class="k">if</span> <span class="nv">type_hints</span> <span class="nv">and</span> <span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span> <span class="nv">in</span> <span class="nv">type_hints</span>:
+
+                <span class="nv">create_model</span><span class="ss">(</span>  # <span class="nv">type</span>: <span class="nv">ignore</span>
+
+                    <span class="nv">getattr</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span>, <span class="s2">&quot;</span><span class="s">__name__</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">ExamplesModel</span><span class="s2">&quot;</span><span class="ss">)</span>,
+
+                    <span class="nv">returns</span><span class="o">=</span><span class="nv">type_hints</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>],
+
+                <span class="ss">)(</span><span class="nv">returns</span><span class="o">=</span><span class="nb">result</span><span class="ss">)</span>
+
+    <span class="nv">def</span> <span class="nv">verify_and_test</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">verify_types</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">None</span>:
+
+        <span class="nv">self</span>.<span class="nv">verify_signature</span><span class="ss">(</span><span class="nv">verify_types</span><span class="o">=</span><span class="nv">verify_types</span><span class="ss">)</span>
+
+        <span class="nv">self</span>.<span class="nv">test</span><span class="ss">(</span><span class="nv">verify_return_type</span><span class="o">=</span><span class="nv">verify_types</span><span class="ss">)</span>
+
+    <span class="nv">def</span> <span class="nv">__str__</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+
+        <span class="nv">arg_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">,</span><span class="se">\n</span><span class="s">    </span><span class="s2">&quot;</span>.<span class="nv">join</span><span class="ss">(</span><span class="nv">repr</span><span class="ss">(</span><span class="nv">arg</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">arg</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">args</span><span class="ss">)</span>
+
+        <span class="k">if</span> <span class="nv">self</span>.<span class="nv">kwargs</span>:
+
+            <span class="nv">arg_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="s">,</span><span class="se">\n</span><span class="s">    </span><span class="s2">&quot;</span> <span class="k">if</span> <span class="nv">arg_str</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="nv">arg_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="s">,</span><span class="se">\n</span><span class="s">    </span><span class="s2">&quot;</span>.<span class="nv">join</span><span class="ss">(</span>
+
+                <span class="nv">f</span><span class="s2">&quot;</span><span class="s">{name}={repr(value)}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">name</span>, <span class="nv">value</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">kwargs</span>.<span class="nv">items</span><span class="ss">()</span>
+
+            <span class="ss">)</span>
+
+        <span class="nv">call_str</span> <span class="o">=</span> <span class="nv">f</span><span class="s2">&quot;</span><span class="s">{self.callable_object.__name__}(</span><span class="se">\n</span><span class="s">    {arg_str}</span><span class="se">\n</span><span class="s">)</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> <span class="nv">self</span>.<span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span>:
+
+            <span class="nv">call_str</span> <span class="o">+=</span> <span class="nv">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s"> == </span><span class="se">\n</span><span class="s">{pformat(self.returns)}</span><span class="s2">&quot;</span>
+
+        <span class="nv">elif</span> <span class="nv">self</span>.<span class="nv">raises</span>:
+
+            <span class="nv">call_str</span> <span class="o">+=</span> <span class="nv">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s">raises {pformat(self.raises)}</span><span class="s2">&quot;</span>
+
+        <span class="k">return</span> <span class="nv">call_str</span>
+</pre></div>
+
+
+</details>
+<hr />
+<h4 id="instance-variables">Instance variables</h4>
+<div class="codehilite"><pre><span></span><span class="n">args</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">callable_object</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">kwargs</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">raises</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">returns</span>
+</pre></div>
+
+
+<h4 id="methods">Methods</h4>
+<h5 id="test">test</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">verify_return_type</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Tests the given example, ensuring the return value matches that specified.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">test</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">verify_return_type</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span><span class="ss">)</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Tests the given example, ensuring the return value matches that specified.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="nv">try</span>:
+
+            <span class="nb">result</span> <span class="o">=</span> <span class="nv">self</span>.<span class="nv">use</span><span class="ss">()</span>
+
+        <span class="nv">except</span> <span class="nv">BaseException</span> <span class="nv">as</span> <span class="nv">exception</span>:
+
+            <span class="k">if</span> <span class="nv">not</span> <span class="nv">self</span>.<span class="nv">raises</span>:
+
+                <span class="nv">raise</span>
+
+            <span class="k">if</span> <span class="ss">(</span><span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">)</span> <span class="o">==</span> <span class="nv">type</span> <span class="nv">and</span> <span class="nv">not</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">exception</span>, <span class="nv">self</span>.<span class="nv">raises</span><span class="ss">))</span> <span class="nv">or</span> <span class="ss">(</span>
+
+                <span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">)</span> <span class="o">!=</span> <span class="nv">type</span>
+
+                <span class="nv">and</span> <span class="ss">(</span>
+
+                    <span class="nv">not</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">exception</span>, <span class="nv">type</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">raises</span><span class="ss">))</span>
+
+                    <span class="nv">or</span> <span class="nv">self</span>.<span class="nv">raises</span>.<span class="nv">args</span> <span class="o">!=</span> <span class="nv">exception</span>.<span class="nv">args</span>
+
+                <span class="ss">)</span>
+
+            <span class="ss">)</span>:
+
+                <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example expected {repr(self.raises)} to be raised but </span><span class="s2">&quot;</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">instead {repr(exception)} was raised</span><span class="s2">&quot;</span>
+
+                <span class="ss">)</span>
+
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="nv">self</span>.<span class="nv">raises</span>:
+
+            <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example expected {repr(self.raises)} to be raised </span><span class="s2">&quot;</span>
+
+                <span class="nv">f</span><span class="s2">&quot;</span><span class="s">but instead {repr(result)} was returned</span><span class="s2">&quot;</span>
+
+            <span class="ss">)</span>
+
+        <span class="nv">elif</span> <span class="nv">self</span>.<span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span>:
+
+            <span class="k">if</span> <span class="nb">result</span> <span class="o">!=</span> <span class="nv">self</span>.<span class="nv">returns</span>:
+
+                <span class="nv">raise</span> <span class="nv">AssertionError</span><span class="ss">(</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">Example&#39;s expected return value of &#39;{self.returns}&#39; </span><span class="s2">&quot;</span>
+
+                    <span class="nv">f</span><span class="s2">&quot;</span><span class="s">does not not match actual return value of `{result}`</span><span class="s2">&quot;</span>
+
+                <span class="ss">)</span>
+
+        <span class="k">if</span> <span class="nv">verify_return_type</span>:
+
+            <span class="nv">type_hints</span> <span class="o">=</span> <span class="nv">get_type_hints</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>
+
+            <span class="k">if</span> <span class="nv">type_hints</span> <span class="nv">and</span> <span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span> <span class="nv">in</span> <span class="nv">type_hints</span>:
+
+                <span class="nv">create_model</span><span class="ss">(</span>  # <span class="nv">type</span>: <span class="nv">ignore</span>
+
+                    <span class="nv">getattr</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span>, <span class="s2">&quot;</span><span class="s">__name__</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">ExamplesModel</span><span class="s2">&quot;</span><span class="ss">)</span>,
+
+                    <span class="nv">returns</span><span class="o">=</span><span class="nv">type_hints</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>],
+
+                <span class="ss">)(</span><span class="nv">returns</span><span class="o">=</span><span class="nb">result</span><span class="ss">)</span>
+</pre></div>
+
+
+</details>
+<h5 id="use">use</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">use</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</pre></div>
+
+
+<p>Runs the given example, giving back the result returned from running the example call.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">use</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">Any</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Runs the given example, giving back the result returned from running the example call.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">(</span><span class="o">*</span><span class="nv">self</span>.<span class="nv">args</span>, <span class="o">**</span><span class="nv">self</span>.<span class="nv">kwargs</span><span class="ss">)</span>
+</pre></div>
+
+
+</details>
+<h5 id="verify_and_test">verify_and_test</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">verify_and_test</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">verify_types</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">verify_and_test</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">verify_types</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="k">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">verify_signature</span><span class="p">(</span><span class="n">verify_types</span><span class="o">=</span><span class="n">verify_types</span><span class="p">)</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="n">verify_return_type</span><span class="o">=</span><span class="n">verify_types</span><span class="p">)</span>
+</pre></div>
+
+
+</details>
+<h5 id="verify_signature">verify_signature</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">verify_signature</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">verify_types</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Verifies that the example makes sense against the functions signature.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">verify_signature</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">verify_types</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span><span class="ss">)</span>:
+
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">Verifies that the example makes sense against the functions signature.</span><span class="s2">&quot;&quot;&quot;</span>
+
+        <span class="nv">bound</span> <span class="o">=</span> <span class="nv">inspect</span>.<span class="nv">signature</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>.<span class="nv">bind</span><span class="ss">(</span><span class="o">*</span><span class="nv">self</span>.<span class="nv">args</span>, <span class="o">**</span><span class="nv">self</span>.<span class="nv">kwargs</span><span class="ss">)</span>
+
+        <span class="nv">annotations</span> <span class="o">=</span> <span class="nv">get_type_hints</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span><span class="ss">)</span>
+
+        <span class="k">if</span> <span class="nv">verify_types</span> <span class="nv">and</span> <span class="nv">annotations</span>:
+
+            <span class="nv">test_type_hints</span> <span class="o">=</span> {}
+
+            <span class="nv">typed_example_values</span> <span class="o">=</span> {}
+
+            <span class="k">for</span> <span class="nv">parameter_name</span>, <span class="nv">parameter_value</span> <span class="nv">in</span> <span class="nv">bound</span>.<span class="nv">arguments</span>.<span class="nv">items</span><span class="ss">()</span>:
+
+                <span class="nv">type_hint</span> <span class="o">=</span> <span class="nv">annotations</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">parameter_name</span>, <span class="nv">None</span><span class="ss">)</span>
+
+                <span class="nv">test_type_hints</span>[<span class="nv">parameter_name</span>] <span class="o">=</span> <span class="ss">(</span><span class="nv">type_hint</span>, <span class="nv">None</span><span class="ss">)</span>
+
+                <span class="nv">typed_example_values</span>[<span class="nv">parameter_name</span>] <span class="o">=</span> <span class="nv">parameter_value</span>
+
+            <span class="k">if</span> <span class="nv">self</span>.<span class="nv">returns</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">NotDefined</span> <span class="nv">and</span> <span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span> <span class="nv">in</span> <span class="nv">annotations</span>:
+
+                <span class="nv">test_type_hints</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>] <span class="o">=</span> <span class="nv">annotations</span>[<span class="s2">&quot;</span><span class="s">return</span><span class="s2">&quot;</span>]
+
+                <span class="nv">typed_example_values</span>[<span class="s2">&quot;</span><span class="s">returns</span><span class="s2">&quot;</span>] <span class="o">=</span> <span class="nv">self</span>.<span class="nv">returns</span>
+
+            <span class="nv">create_model</span><span class="ss">(</span>  # <span class="nv">type</span>: <span class="nv">ignore</span>
+
+                <span class="nv">getattr</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">callable_object</span>, <span class="s2">&quot;</span><span class="s">__name__</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">ExamplesModel</span><span class="s2">&quot;</span><span class="ss">)</span>, <span class="o">**</span><span class="nv">test_type_hints</span>
+
+            <span class="ss">)(</span><span class="o">**</span><span class="nv">typed_example_values</span><span class="ss">)</span>
+</pre></div>
+
+
+</details>
+<h3 id="notdefined">NotDefined</h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">NotDefined</span><span class="p">(</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>This exists to allow distinctly checking for a parameter not passed in
+vs. one that is passed in as None.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">class</span> <span class="nv">NotDefined</span>:
+
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">This exists to allow distinctly checking for a parameter not passed in</span>
+
+       <span class="nv">vs</span>. <span class="nv">one</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">passed</span> <span class="nv">in</span> <span class="nv">as</span> <span class="nv">None</span>.
+
+    <span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="nv">pass</span>
+</pre></div>
+
+
+</details>
+<hr />
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
