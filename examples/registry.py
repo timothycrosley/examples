@@ -1,3 +1,4 @@
+from pprint import pformat
 from typing import Any, Callable, Dict, List
 
 from examples.example_objects import CallableExample, NotDefined
@@ -27,9 +28,10 @@ class Examples:
         indent_spaces: str = " " * indent
 
         if "Examples:" not in function.__doc__:
-            function.__doc__ += f"\n\n{indent_spaces}Examples:\n"
+            function.__doc__ += f"\n\n{indent_spaces}Examples:\n\n"
 
-        function.__doc__ += f"{indent_spaces}- {example}"
+        indented_example = str(example).replace("\n", f"\n{indent_spaces}        ")
+        function.__doc__ += f"{indent_spaces}-\n{indent_spaces}        {indented_example}"
 
     def example(
         self, *args, _example_returns=NotDefined, _example_raises=None, **kwargs

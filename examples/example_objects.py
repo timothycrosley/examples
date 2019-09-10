@@ -1,4 +1,5 @@
 import inspect
+from pprint import pformat
 from typing import Any, Callable, get_type_hints
 
 from pydantic import create_model
@@ -99,12 +100,16 @@ class CallableExample:
         self.test(verify_return_type=verify_types)
 
     def __str__(self):
-        arg_str = ", ".join(repr(arg) for arg in self.args)
+        arg_str = ",\n    ".join(repr(arg) for arg in self.args)
         if self.kwargs:
-            arg_str += ", " if arg_str else ""
-            arg_str += ", ".join(f"{name}={repr(value)}" for name, value in self.kwargs.items())
+            arg_str += ",\n    " if arg_str else ""
+            arg_str += ",\n    ".join(
+                f"{name}={repr(value)}" for name, value in self.kwargs.items()
+            )
 
-        call_str = f"{self.callable_object.__name__}({arg_str})"
+        call_str = f"{self.callable_object.__name__}(\n    {arg_str}\n)"
         if self.returns is not NotDefined:
-            call_str += f" == {self.returns}"
-        return f"`{call_str}`"
+            call_str += f"\n == \n{pformat(self.returns)}"
+        elif self.raises:
+            call_str += f"\nraises {pformat(self.raises)}"
+        return call_str
