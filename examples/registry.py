@@ -1,6 +1,6 @@
 from typing import Any, Callable, Dict, List
 
-from examples.example_objects import CallableExample
+from examples.example_objects import CallableExample, NotDefined
 
 
 class Examples:
@@ -31,19 +31,11 @@ class Examples:
 
         function.__doc__ += f"{indent_spaces}- {example}"
 
-    def example(self, *args, **kwargs) -> Callable:
+    def example(self, *args, _example_returns=NotDefined, **kwargs) -> Callable:
         def example_wrapper(function):
-            new_example = CallableExample(function, args=args, kwargs=kwargs)
-            self._callable_mapping.setdefault(function, []).append(new_example)
-            self._add_to_doc_string(function, new_example)
-            self.examples.append(new_example)
-            return function
-
-        return example_wrapper
-
-    def example_returns(self, _returns: Any, *args, **kwargs) -> Callable:
-        def example_wrapper(function: Callable) -> Callable:
-            new_example = CallableExample(function, returns=_returns, args=args, kwargs=kwargs)
+            new_example = CallableExample(
+                function, returns=_example_returns, args=args, kwargs=kwargs
+            )
             self._callable_mapping.setdefault(function, []).append(new_example)
             self._add_to_doc_string(function, new_example)
             self.examples.append(new_example)

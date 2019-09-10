@@ -1,6 +1,5 @@
 from examples.api import (
     example,
-    example_returns,
     get_examples,
     test_all_examples,
     test_examples,

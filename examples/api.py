@@ -3,10 +3,10 @@ from types import FunctionType, ModuleType
 from typing import Any, Callable, List
 
 from examples import registry
-from examples.example_objects import CallableExample
+from examples.example_objects import CallableExample, NotDefined
 
 
-def example(*args, **kwargs) -> Callable:
+def example(*args, _example_returns: Any = NotDefined, **kwargs) -> Callable:
     """A decorator that adds an example to the decorated function."""
 
     def wrap_example(function: Callable) -> Callable:
@@ -14,22 +14,7 @@ def example(*args, **kwargs) -> Callable:
         if attached_module_name not in registry.module_registry:
             registry.module_registry[attached_module_name] = registry.Examples()
         module_registry = registry.module_registry[attached_module_name]
-        return module_registry.example(*args, **kwargs)(function)
-
-    return wrap_example
-
-
-def example_returns(_returns: Any, *args, **kwargs) -> Callable:
-    """A decorator that adds an example to the decorated function, with the first argument
-       being an expected return value.
-    """
-
-    def wrap_example(function: Callable) -> Callable:
-        attached_module_name = function.__module__
-        if attached_module_name not in registry.module_registry:
-            registry.module_registry[attached_module_name] = registry.Examples()
-        module_registry = registry.module_registry[attached_module_name]
-        return module_registry.example_returns(_returns, *args, **kwargs)(function)
+        return module_registry.example(*args, _example_returns=_example_returns, **kwargs)(function)
 
     return wrap_example
 
