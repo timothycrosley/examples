@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pyzample"
+name = "xamples"
 version = "1.0.0"
 description = "Tests and Documentation Done by Example. An alias for the project `examples` with better SEO opportunities"
 authors = ["Timothy Crosley <timothy.crosley@gmail.com>"]
