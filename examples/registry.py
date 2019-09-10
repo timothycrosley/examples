@@ -1,5 +1,4 @@
-from pprint import pformat
-from typing import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List, Optional
 
 from examples.example_objects import CallableExample, NotDefined
 
@@ -33,9 +32,9 @@ class Examples:
     def example(
         self,
         *args,
-        _example_returns=NotDefined,
-        _example_raises=None,
-        _example_doc_string=None,
+        _example_returns: Any = NotDefined,
+        _example_raises: Any = None,
+        _example_doc_string: Optional[bool] = None,
         **kwargs,
     ) -> Callable:
         def example_wrapper(function):

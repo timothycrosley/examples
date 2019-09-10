@@ -65,7 +65,7 @@ def _get_examples_module_name(item: str) -> List[CallableExample]:
 @get_examples.register(ModuleType)
 def _get_examples_module(item: ModuleType) -> List[CallableExample]:
     """Returns all examples registered to a module"""
-    return _get_examples_module_name(item.__name__)  # type: ignore
+    return _get_examples_module_name(item.__name__)
 
 
 @singledispatch
@@ -94,7 +94,7 @@ def _verify_module_name_signatures(item: str, verify_types: bool = True) -> None
 @verify_signatures.register(ModuleType)
 def _verify_module_signatures(item: ModuleType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
-    _verify_module_name_signatures(item.__name__, verify_types=verify_types)  # type: ignore
+    _verify_module_name_signatures(item.__name__, verify_types=verify_types)
 
 
 @verify_signatures.register(FunctionType)
@@ -137,7 +137,7 @@ def _test_module_name_examples(item: str, verify_return_type: bool = True) -> No
 @test_examples.register(ModuleType)
 def _test_module_examples(item: ModuleType, verify_return_type: bool = True) -> None:
     """Tests all examples associated with the provided module."""
-    _test_module_name_examples(item.__name__, verify_return_type=verify_return_type)  # type: ignore
+    _test_module_name_examples(item.__name__, verify_return_type=verify_return_type)
 
 
 @test_examples.register(FunctionType)
@@ -181,7 +181,7 @@ def _verify_and_test_module_name_examples(item: str, verify_types: bool = True) 
 @verify_and_test_examples.register(ModuleType)
 def _verify_and_test_module_examples(item: ModuleType, verify_types: bool = True) -> None:
     """Verify signatures associated with the provided module."""
-    _verify_and_test_module_name_examples(item.__name__, verify_types=verify_types)  # type: ignore
+    _verify_and_test_module_name_examples(item.__name__, verify_types=verify_types)
 
 
 @verify_and_test_examples.register(FunctionType)
