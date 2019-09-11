@@ -39,7 +39,7 @@ The following guides should get you up and running using eXamples in no time.
         # my_module_with_examples.py
         from examples import example
 
-        @example(1, 1, _example_returns=2)
+        @example(1, number_2=1, _example_returns=2)
         def add(number_1: int, number_2: int) -> int:
             return number_1 + number_2
 
