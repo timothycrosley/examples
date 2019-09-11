@@ -12,12 +12,12 @@ _________________
 [Read Latest Documentation](https://timothycrosley.github.io/examples/) - [Browse GitHub Code Repository](https://github.com/timothycrosley/examples/)
 _________________
 
-**eXamples** (AKA: xamples for SEO purposes) is a Python3 library enabling interactable, self-documentating, and self-verifying examples to be attached to Python functions using decorators.
+**eXamples** (AKA: xamples for SEO) is a Python3 library enabling interactable, self-documenting, and self-verifying examples. These examples are attached directly to Python functions using decorators or via separate `MODULE_examples.py` source files.
 
 Key Features:
 
-* **Simple and Obvious API**: Simply add `@examples.example(*args, **kwargs)` decorators for each example you want to add to a function.
-* **Auto Documenting**: Examples, by default, get added to your functions docstring viewable both in interactive interpreters and when using examples or pdocs.
+* **Simple and Obvious API**: Add `@examples.example(*args, **kwargs)` decorators for each example you want to add to a function.
+* **Auto Documenting**: Examples, by default, get added to your functions docstring viewable both in interactive interpreters and when using [portray](https://timothycrosley.github.io/portray/) or [pdocs](https://timothycrosley.github.io/pdocs/).
 * **Signature Validating**: All examples can easily be checked to ensure they match the function signature (and type annotations!) with a single call (`examples.verify_all_signatures()`).
 * **Act as Tests**: Examples act as additional test cases, that can easily be verified using a single test case in your favorite test runner: (`examples.test_all_examples()`).
 
@@ -53,8 +53,7 @@ The following guides should get you up and running with a documentation website 
 ## Why Create Examples?
 
 I've always wanted a way to attach examples to functions in a way that would be re-useable for documentation, testing, and API proposes.
-Just like moving Python parameter types from comments into prorammatically specified and easily introspectable entities has made them more braodly useful,
-I hope examples can do the same for example parameters.
+Just like moving Python parameter types from comments into type annotations has made them more broadly useful, I hope examples can do the same for example calls.
 
 I hope you too find `eXamples` useful!
 
