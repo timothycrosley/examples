@@ -20,6 +20,7 @@ Key Features:
 * **Auto Documenting**: Examples, by default, get added to your functions docstring viewable both in interactive interpreters and when using [portray](https://timothycrosley.github.io/portray/) or [pdocs](https://timothycrosley.github.io/pdocs/).
 * **Signature Validating**: All examples can easily be checked to ensure they match the function signature (and type annotations!) with a single call (`examples.verify_all_signatures()`).
 * **Act as Tests**: Examples act as additional test cases, that can easily be verified using a single test case in your favorite test runner: (`examples.test_all_examples()`).
+* **Async Compatibility**: Examples can be attached and tested as easily against async functions as non-async ones.
 
 What's Missing:
 

@@ -1,3 +1,4 @@
+import asyncio
 import inspect
 from pprint import pformat
 from typing import Any, Callable, get_type_hints
@@ -52,6 +53,15 @@ class CallableExample:
 
     def use(self) -> Any:
         """Runs the given example, giving back the result returned from running the example call."""
+        if inspect.iscoroutinefunction(self.callable_object):
+            loop = asyncio.get_event_loop()
+            call = self.callable_object(*self.args, **self.kwargs)
+            if loop.is_running():
+                return call  # pragma: no cover
+
+            function = asyncio.ensure_future(call, loop=loop)
+            loop.run_until_complete(function)
+            return function.result()
         return self.callable_object(*self.args, **self.kwargs)
 
     def test(self, verify_return_type: bool = True):
