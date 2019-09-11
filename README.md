@@ -14,6 +14,8 @@ _________________
 
 **eXamples** (AKA: xamples for SEO) is a Python3 library enabling interactable, self-documenting, and self-verifying examples. These examples are attached directly to Python functions using decorators or via separate `MODULE_examples.py` source files.
 
+[![Example Usage Gif](https://raw.githubusercontent.com/timothycrosley/examples/master/art/example.gif)](https://raw.githubusercontent.com/timothycrosley/examples/master/art/example.gif)
+
 Key Features:
 
 * **Simple and Obvious API**: Add `@examples.example(*args, **kwargs)` decorators for each example you want to add to a function.
