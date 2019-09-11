@@ -37,6 +37,44 @@ def example(
     return wrap_example
 
 
+def add_example_to(function: Callable) -> Callable:
+    """Returns a function that when called will add an example to the provide function.
+
+    This can be re-used multiple times to add multiple examples:
+
+            add_example = add_example_to(my_sum_function)
+            add_example(1, 2)
+            add_example(2, 3, _example_returns=5)
+
+    Or, can be used once for a single example:
+
+            add_example_to(my_sum_function)(1, 1, _example_returns=5)
+
+    The returned function follows the same signature as the @example decorator except
+    it returns the produced examples, allowing you to expose it:
+
+            add_example = add_example_to(my_sum_function)(1, 1)
+    """
+
+    def example_factory(
+        *args,
+        _example_returns: Any = NotDefined,
+        _example_raises: Any = None,
+        _example_doc_string: bool = True,
+        **kwargs,
+    ) -> CallableExample:
+        example(
+            *args,
+            _example_returns=_example_returns,
+            _example_raises=_example_raises,
+            _example_doc_string=_example_doc_string,
+            **kwargs,
+        )(function)
+        return get_examples(function)[-1]
+
+    return example_factory
+
+
 @singledispatch
 def get_examples(item: Any) -> List[CallableExample]:
     """Returns all examples associated with the provided item.
