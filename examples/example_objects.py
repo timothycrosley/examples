@@ -113,3 +113,6 @@ class CallableExample:
         elif self.raises:
             call_str += f"\nraises {pformat(self.raises)}"
         return call_str
+
+    def __repr__(self):
+        return f"Example:\n{str(self)}"
