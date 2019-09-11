@@ -179,3 +179,11 @@ def test_return_instead_of_exception():
             return True
 
         api.verify_and_test_examples(my_third_example)
+
+
+def test_async_example():
+    @api.example(1, _example_returns=1)
+    async def my_function(number_1: int):
+        return number_1
+
+    api.verify_and_test_examples(my_function)

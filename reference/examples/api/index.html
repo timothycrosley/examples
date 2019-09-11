@@ -31,7 +31,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../art/logo.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="#fb8c00">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -96,7 +96,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../../.." title="examples" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../../art/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -188,7 +188,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../../.." title="examples" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../../art/logo.png" width="48" height="48">
       
     </a>
     examples
@@ -232,18 +232,90 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/1.-contributing-guide/" title="1. Contributing Guide" class="md-nav__link">
+      1. Contributing Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/2.-coding-standard/" title="2. Coding Standard" class="md-nav__link">
+      2. Coding Standard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/3.-code-of-conduct/" title="3. Code Of Conduct" class="md-nav__link">
+      3. Code Of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/4.-acknowledgements/" title="4. Acknowledgements" class="md-nav__link">
+      4. Acknowledgements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -258,13 +330,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
-    <label class="md-nav__link" for="nav-2-1">
+    <label class="md-nav__link" for="nav-3-1">
       Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
+      <label class="md-nav__title" for="nav-3-1">
         Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -309,6 +381,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add_example_to" class="md-nav__link">
+    add_example_to
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
@@ -457,6 +536,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#add_example_to" class="md-nav__link">
+    add_example_to
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     example
   </a>
@@ -594,6 +680,62 @@
         <span class="p">)(</span><span class="n">function</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">wrap_example</span>
+
+<span class="k">def</span> <span class="nf">add_example_to</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;Returns a function that when called will add an example to the provide function.</span>
+
+<span class="sd">    This can be re-used multiple times to add multiple examples:</span>
+
+<span class="sd">            add_example = add_example_to(my_sum_function)</span>
+
+<span class="sd">            add_example(1, 2)</span>
+
+<span class="sd">            add_example(2, 3, _example_returns=5)</span>
+
+<span class="sd">    Or, can be used once for a single example:</span>
+
+<span class="sd">            add_example_to(my_sum_function)(1, 1, _example_returns=5)</span>
+
+<span class="sd">    The returned function follows the same signature as the @example decorator except</span>
+
+<span class="sd">    it returns the produced examples, allowing you to expose it:</span>
+
+<span class="sd">            add_example = add_example_to(my_sum_function)(1, 1)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">example_factory</span><span class="p">(</span>
+
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+
+        <span class="n">_example_returns</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">NotDefined</span><span class="p">,</span>
+
+        <span class="n">_example_raises</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+
+        <span class="n">_example_doc_string</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CallableExample</span><span class="p">:</span>
+
+        <span class="n">example</span><span class="p">(</span>
+
+            <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+
+            <span class="n">_example_returns</span><span class="o">=</span><span class="n">_example_returns</span><span class="p">,</span>
+
+            <span class="n">_example_raises</span><span class="o">=</span><span class="n">_example_raises</span><span class="p">,</span>
+
+            <span class="n">_example_doc_string</span><span class="o">=</span><span class="n">_example_doc_string</span><span class="p">,</span>
+
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+
+        <span class="p">)(</span><span class="n">function</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">get_examples</span><span class="p">(</span><span class="n">function</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">example_factory</span>
 
 <span class="nd">@singledispatch</span>
 
@@ -867,6 +1009,91 @@
 
 </details>
 <h2 id="functions">Functions</h2>
+<h3 id="add_example_to">add_example_to</h3>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">add_example_to</span><span class="p">(</span>
+    <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span>
+</pre></div>
+
+
+<p>Returns a function that when called will add an example to the provide function.</p>
+<p>This can be re-used multiple times to add multiple examples:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">add_example</span> <span class="o">=</span> <span class="n">add_example_to</span><span class="p">(</span><span class="n">my_sum_function</span><span class="p">)</span>
+    <span class="n">add_example</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">add_example</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">_example_returns</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Or, can be used once for a single example:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">add_example_to</span><span class="p">(</span><span class="n">my_sum_function</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">_example_returns</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The returned function follows the same signature as the @example decorator except
+it returns the produced examples, allowing you to expose it:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">add_example</span> <span class="o">=</span> <span class="n">add_example_to</span><span class="p">(</span><span class="n">my_sum_function</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">add_example_to</span><span class="ss">(</span><span class="nv">function</span>: <span class="nv">Callable</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">Callable</span>:
+
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">Returns a function that when called will add an example to the provide function.</span>
+
+    <span class="nv">This</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">re</span><span class="o">-</span><span class="nv">used</span> <span class="nv">multiple</span> <span class="nv">times</span> <span class="nv">to</span> <span class="nv">add</span> <span class="nv">multiple</span> <span class="nv">examples</span>:
+
+            <span class="nv">add_example</span> <span class="o">=</span> <span class="nv">add_example_to</span><span class="ss">(</span><span class="nv">my_sum_function</span><span class="ss">)</span>
+
+            <span class="nv">add_example</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span><span class="ss">)</span>
+
+            <span class="nv">add_example</span><span class="ss">(</span><span class="mi">2</span>, <span class="mi">3</span>, <span class="nv">_example_returns</span><span class="o">=</span><span class="mi">5</span><span class="ss">)</span>
+
+    <span class="nv">Or</span>, <span class="nv">can</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">once</span> <span class="k">for</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">example</span>:
+
+            <span class="nv">add_example_to</span><span class="ss">(</span><span class="nv">my_sum_function</span><span class="ss">)(</span><span class="mi">1</span>, <span class="mi">1</span>, <span class="nv">_example_returns</span><span class="o">=</span><span class="mi">5</span><span class="ss">)</span>
+
+    <span class="nv">The</span> <span class="nv">returned</span> <span class="nv">function</span> <span class="nv">follows</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">signature</span> <span class="nv">as</span> <span class="nv">the</span> @<span class="nv">example</span> <span class="nv">decorator</span> <span class="nv">except</span>
+
+    <span class="nv">it</span> <span class="nv">returns</span> <span class="nv">the</span> <span class="nv">produced</span> <span class="nv">examples</span>, <span class="nv">allowing</span> <span class="nv">you</span> <span class="nv">to</span> <span class="nv">expose</span> <span class="nv">it</span>:
+
+            <span class="nv">add_example</span> <span class="o">=</span> <span class="nv">add_example_to</span><span class="ss">(</span><span class="nv">my_sum_function</span><span class="ss">)(</span><span class="mi">1</span>, <span class="mi">1</span><span class="ss">)</span>
+
+    <span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="nv">def</span> <span class="nv">example_factory</span><span class="ss">(</span>
+
+        <span class="o">*</span><span class="nv">args</span>,
+
+        <span class="nv">_example_returns</span>: <span class="nv">Any</span> <span class="o">=</span> <span class="nv">NotDefined</span>,
+
+        <span class="nv">_example_raises</span>: <span class="nv">Any</span> <span class="o">=</span> <span class="nv">None</span>,
+
+        <span class="nv">_example_doc_string</span>: <span class="nv">bool</span> <span class="o">=</span> <span class="nv">True</span>,
+
+        <span class="o">**</span><span class="nv">kwargs</span>,
+
+    <span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">CallableExample</span>:
+
+        <span class="nv">example</span><span class="ss">(</span>
+
+            <span class="o">*</span><span class="nv">args</span>,
+
+            <span class="nv">_example_returns</span><span class="o">=</span><span class="nv">_example_returns</span>,
+
+            <span class="nv">_example_raises</span><span class="o">=</span><span class="nv">_example_raises</span>,
+
+            <span class="nv">_example_doc_string</span><span class="o">=</span><span class="nv">_example_doc_string</span>,
+
+            <span class="o">**</span><span class="nv">kwargs</span>,
+
+        <span class="ss">)(</span><span class="nv">function</span><span class="ss">)</span>
+
+        <span class="k">return</span> <span class="nv">get_examples</span><span class="ss">(</span><span class="nv">function</span><span class="ss">)</span>[<span class="o">-</span><span class="mi">1</span>]
+
+    <span class="k">return</span> <span class="nv">example_factory</span>
+</pre></div>
+
+
+</details>
 <h3 id="example">example</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">(</span>
     <span class="o">*</span><span class="n">args</span><span class="p">,</span>
@@ -1141,7 +1368,7 @@ Provided item should be of type function, module, or module name.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../docs/contributing/4.-acknowledgements/" title="4. Acknowledgements" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1150,7 +1377,7 @@ Provided item should be of type function, module, or module name.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                4. Acknowledgements
               </span>
             </div>
           </a>

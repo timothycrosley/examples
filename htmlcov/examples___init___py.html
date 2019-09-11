@@ -77,11 +77,11 @@
 <p id="n8" class="pln"><a href="#n8">8</a></p>
 <p id="n9" class="pln"><a href="#n9">9</a></p>
 <p id="n10" class="pln"><a href="#n10">10</a></p>
-<p id="n11" class="stm run hide_run"><a href="#n11">11</a></p>
-<p id="n12" class="pln"><a href="#n12">12</a></p>
-<p id="n13" class="stm run hide_run"><a href="#n13">13</a></p>
+<p id="n11" class="pln"><a href="#n11">11</a></p>
+<p id="n12" class="stm run hide_run"><a href="#n12">12</a></p>
+<p id="n13" class="pln"><a href="#n13">13</a></p>
 <p id="n14" class="stm run hide_run"><a href="#n14">14</a></p>
-<p id="n15" class="pln"><a href="#n15">15</a></p>
+<p id="n15" class="stm run hide_run"><a href="#n15">15</a></p>
 <p id="n16" class="pln"><a href="#n16">16</a></p>
 <p id="n17" class="pln"><a href="#n17">17</a></p>
 <p id="n18" class="pln"><a href="#n18">18</a></p>
@@ -93,35 +93,39 @@
 <p id="n24" class="pln"><a href="#n24">24</a></p>
 <p id="n25" class="pln"><a href="#n25">25</a></p>
 <p id="n26" class="pln"><a href="#n26">26</a></p>
+<p id="n27" class="pln"><a href="#n27">27</a></p>
+<p id="n28" class="pln"><a href="#n28">28</a></p>
 
             </td>
             <td class="text">
 <p id="t1" class="stm run hide_run"><span class="key">from</span> <span class="nam">examples</span><span class="op">.</span><span class="nam">api</span> <span class="key">import</span> <span class="op">(</span><span class="strut">&nbsp;</span></p>
-<p id="t2" class="pln">    <span class="nam">example</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t3" class="pln">    <span class="nam">get_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t4" class="pln">    <span class="nam">test_all_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t5" class="pln">    <span class="nam">test_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t6" class="pln">    <span class="nam">verify_all_signatures</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t7" class="pln">    <span class="nam">verify_and_test_all_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t8" class="pln">    <span class="nam">verify_and_test_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t9" class="pln">    <span class="nam">verify_signatures</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t10" class="pln"><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t11" class="stm run hide_run"><span class="key">from</span> <span class="nam">examples</span><span class="op">.</span><span class="nam">registry</span> <span class="key">import</span> <span class="nam">Examples</span><span class="strut">&nbsp;</span></p>
-<p id="t12" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t13" class="stm run hide_run"><span class="nam">__version__</span> <span class="op">=</span> <span class="str">"0.0.2"</span><span class="strut">&nbsp;</span></p>
-<p id="t14" class="stm run hide_run"><span class="nam">__all__</span> <span class="op">=</span> <span class="op">[</span><span class="strut">&nbsp;</span></p>
-<p id="t15" class="pln">    <span class="str">"__version__"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t16" class="pln">    <span class="str">"example"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t17" class="pln">    <span class="str">"example_returns"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t18" class="pln">    <span class="str">"get_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t19" class="pln">    <span class="str">"verify_signatures"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t20" class="pln">    <span class="str">"test_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t21" class="pln">    <span class="str">"verify_and_test_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t22" class="pln">    <span class="str">"verify_all_signatures"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t23" class="pln">    <span class="str">"test_all_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t24" class="pln">    <span class="str">"verify_and_test_all_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t25" class="pln">    <span class="str">"Examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t26" class="pln"><span class="op">]</span><span class="strut">&nbsp;</span></p>
+<p id="t2" class="pln">    <span class="nam">add_example_to</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t3" class="pln">    <span class="nam">example</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t4" class="pln">    <span class="nam">get_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t5" class="pln">    <span class="nam">test_all_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t6" class="pln">    <span class="nam">test_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t7" class="pln">    <span class="nam">verify_all_signatures</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t8" class="pln">    <span class="nam">verify_and_test_all_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t9" class="pln">    <span class="nam">verify_and_test_examples</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t10" class="pln">    <span class="nam">verify_signatures</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t11" class="pln"><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t12" class="stm run hide_run"><span class="key">from</span> <span class="nam">examples</span><span class="op">.</span><span class="nam">registry</span> <span class="key">import</span> <span class="nam">Examples</span><span class="strut">&nbsp;</span></p>
+<p id="t13" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t14" class="stm run hide_run"><span class="nam">__version__</span> <span class="op">=</span> <span class="str">"0.1.1"</span><span class="strut">&nbsp;</span></p>
+<p id="t15" class="stm run hide_run"><span class="nam">__all__</span> <span class="op">=</span> <span class="op">[</span><span class="strut">&nbsp;</span></p>
+<p id="t16" class="pln">    <span class="str">"__version__"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t17" class="pln">    <span class="str">"add_example_to"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t18" class="pln">    <span class="str">"example"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t19" class="pln">    <span class="str">"example_returns"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t20" class="pln">    <span class="str">"get_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t21" class="pln">    <span class="str">"verify_signatures"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t22" class="pln">    <span class="str">"test_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t23" class="pln">    <span class="str">"verify_and_test_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t24" class="pln">    <span class="str">"verify_all_signatures"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t25" class="pln">    <span class="str">"test_all_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t26" class="pln">    <span class="str">"verify_and_test_all_examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t27" class="pln">    <span class="str">"Examples"</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t28" class="pln"><span class="op">]</span><span class="strut">&nbsp;</span></p>
 
             </td>
         </tr>
@@ -132,7 +136,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.4</a>,
-            created at 2019-09-09 22:49
+            created at 2019-09-10 21:49
         </p>
     </div>
 </div>

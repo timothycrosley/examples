@@ -9,6 +9,7 @@ def test_doc_strings():
         return number_1 + number_2
 
     assert add.__doc__ and "Examples" in add.__doc__ and "add" in add.__doc__ and "1" in add.__doc__
+    assert "Example:" in repr(my_examples.get(add)[0])
 
     my_docless_examples = Examples(add_to_doc_strings=False)
 

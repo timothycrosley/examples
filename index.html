@@ -31,7 +31,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="art/logo.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="#fb8c00">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -96,7 +96,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="." title="examples" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="art/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -188,7 +188,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="." title="examples" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="art/logo.png" width="48" height="48">
       
     </a>
     examples
@@ -279,10 +279,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Reference
+      Contributing
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/contributing/1.-contributing-guide/" title="1. Contributing Guide" class="md-nav__link">
+      1. Contributing Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/contributing/2.-coding-standard/" title="2. Coding Standard" class="md-nav__link">
+      2. Coding Standard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/contributing/3.-code-of-conduct/" title="3. Code Of Conduct" class="md-nav__link">
+      3. Code Of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/contributing/4.-acknowledgements/" title="4. Acknowledgements" class="md-nav__link">
+      4. Acknowledgements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -295,13 +367,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
     
-    <label class="md-nav__link" for="nav-2-1">
+    <label class="md-nav__link" for="nav-3-1">
       Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
+      <label class="md-nav__title" for="nav-3-1">
         Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -429,32 +501,56 @@
 <hr />
 <p><a href="https://timothycrosley.github.io/examples/">Read Latest Documentation</a> - <a href="https://github.com/timothycrosley/examples/">Browse GitHub Code Repository</a></p>
 <hr />
-<p><strong>eXamples</strong> (AKA: xamples for SEO purposes) is a Python3 library enabling interactable, self-documentating, and self-verifying examples to be attached to Python functions using decorators.</p>
-<p><a href="https://raw.githubusercontent.com/timothycrosley/portray/master/art/example.gif"><img alt="Example Usage Gif" src="https://raw.githubusercontent.com/timothycrosley/portray/master/art/example.gif" /></a></p>
+<p><strong>eXamples</strong> (AKA: xamples for SEO) is a Python3 library enabling interactable, self-documenting, and self-verifying examples. These examples are attached directly to Python functions using decorators or via separate <code>MODULE_examples.py</code> source files.</p>
 <p>Key Features:</p>
 <ul>
-<li><strong>Simple and Obvious API</strong>: Simply add <code>@examples.example(*args, **kwargs)</code> decorators for each example you want to add to a function.</li>
-<li><strong>Statically Generated</strong>: <code>portray</code> websites are easy to host on GitHub pages and other similar services as they are outputted as standard static HTML websites.</li>
-<li><strong>Markdown Aware</strong>: <code>portray</code> will automatically include your projects <code>.md</code> files and render them into HTML. It will also find and render Markdown within <code>__doc__</code> strings.</li>
-<li><strong>Fully Configurable</strong>: While <code>portray</code> doesn't have to be configured, you still can fully configure it within the standard <code>pyproject.toml</code> file.</li>
-<li><strong>Easily Programmable</strong>: <code>portray</code> exposes a clean and simple <a href="https://timothycrosley.github.io/portray/reference/portray/api/">Python API</a>.</li>
-<li><strong>Searchable</strong>: Out of the box <code>portray</code> makes all of your documentation, even autogenerated code references, free-text searchable.</li>
-<li><strong>Themeable</strong>: <code>portray</code> is compatible with all existing <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs Themes</a>.</li>
+<li><strong>Simple and Obvious API</strong>: Add <code>@examples.example(*args, **kwargs)</code> decorators for each example you want to add to a function.</li>
+<li><strong>Auto Documenting</strong>: Examples, by default, get added to your functions docstring viewable both in interactive interpreters and when using <a href="https://timothycrosley.github.io/portray/">portray</a> or <a href="https://timothycrosley.github.io/pdocs/">pdocs</a>.</li>
+<li><strong>Signature Validating</strong>: All examples can easily be checked to ensure they match the function signature (and type annotations!) with a single call (<code>examples.verify_all_signatures()</code>).</li>
+<li><strong>Act as Tests</strong>: Examples act as additional test cases, that can easily be verified using a single test case in your favorite test runner: (<code>examples.test_all_examples()</code>).</li>
+<li><strong>Async Compatibility</strong>: Examples can be attached and tested as easily against async functions as non-async ones.</li>
 </ul>
-<p>Under the hood, portray combines the <a href="https://commonmark.org/help/">Markdown</a> documentation rendering capabilities provided by <a href="https://www.mkdocs.org/">MkDocs</a>
-with the automatic reference documentation generated by <a href="https://timothycrosley.github.io/pdocs/">pdocs</a>.</p>
+<p>What's Missing:</p>
+<ul>
+<li><strong>Class Support</strong>: Currently examples can only be attached to individual functions. Class and method support is planned for a future release.</li>
+</ul>
 <h2 id="quick-start">Quick Start</h2>
 <p>The following guides should get you up and running with a documentation website in no time.</p>
 <ol>
-<li><a href="https://timothycrosley.github.io/portray/docs/quick_start/1.-installation/">Installation</a> - TL;DR: Run <code>pip3 install portray</code> within your projects virtual environment.</li>
-<li><a href="https://timothycrosley.github.io/portray/docs/quick_start/2.-cli/">Command Line Usage</a> - TL;DR: Run <code>portray in_browser</code> to test and <code>portray on_github_pages</code> to deploy.</li>
-<li><a href="https://timothycrosley.github.io/portray/docs/quick_start/3.-api/">API Usage</a> - TL;DR: Everything available via the CLI is also easily available programmatically from within Python.</li>
-<li><a href="https://timothycrosley.github.io/portray/docs/quick_start/4.-configuration/">Configuration</a> - TL;DR: Put all configuration within a <code>[tool.portray]</code> section of your <code>pyproject.toml</code> file.</li>
+<li>Install: <code>pip3 install examples</code></li>
+<li>
+<p>Add Examples:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">examples</span> <span class="kn">import</span> <span class="n">example</span>
+
+<span class="nd">@example</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">_example_returns</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">number_1</span> <span class="o">+</span> <span class="n">number_2</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Verify and test examples</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">examples</span>
+
+<span class="n">examples</span><span class="o">.</span><span class="n">verify_and_test_all_examples</span><span class="p">()</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Introspect examples</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">examples</span>
+
+<span class="n">examples</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">add</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">use</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span>
+</pre></div>
+
+
+</li>
 </ol>
 <h2 id="why-create-examples">Why Create Examples?</h2>
 <p>I've always wanted a way to attach examples to functions in a way that would be re-useable for documentation, testing, and API proposes.
-Just like moving Python parameter types from comments into prorammatically specified and easily introspectable entities has made them more braodly useful,
-I hope examples can do the same for example parameters.</p>
+Just like moving Python parameter types from comments into type annotations has made them more broadly useful, I hope examples can do the same for example calls.</p>
 <p>I hope you too find <code>eXamples</code> useful!</p>
 <p>~Timothy Crosley</p>
                 
@@ -478,13 +574,13 @@ I hope examples can do the same for example parameters.</p>
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="reference/examples/api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="docs/contributing/1.-contributing-guide/" title="1. Contributing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API
+                1. Contributing Guide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

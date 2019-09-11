@@ -31,7 +31,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../art/logo.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="#fb8c00">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -96,7 +96,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../../.." title="examples" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../../art/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -188,7 +188,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../../.." title="examples" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../../art/logo.png" width="48" height="48">
       
     </a>
     examples
@@ -232,18 +232,90 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/1.-contributing-guide/" title="1. Contributing Guide" class="md-nav__link">
+      1. Contributing Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/2.-coding-standard/" title="2. Coding Standard" class="md-nav__link">
+      2. Coding Standard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/3.-code-of-conduct/" title="3. Code Of Conduct" class="md-nav__link">
+      3. Code Of Conduct
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docs/contributing/4.-acknowledgements/" title="4. Acknowledgements" class="md-nav__link">
+      4. Acknowledgements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -258,13 +330,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
-    <label class="md-nav__link" for="nav-2-1">
+    <label class="md-nav__link" for="nav-3-1">
       Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
+      <label class="md-nav__title" for="nav-3-1">
         Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -615,7 +687,9 @@
 
         <span class="n">indented_example</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">example</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">{indent_spaces}        &quot;</span><span class="p">)</span>
 
-        <span class="n">function</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;{indent_spaces}-</span><span class="se">\n</span><span class="s2">{indent_spaces}        {indented_example}&quot;</span>
+        <span class="n">function</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">{indent_spaces}        {indented_example}&quot;</span>
+
+        <span class="n">function</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">-------&quot;</span>
 
     <span class="k">def</span> <span class="nf">example</span><span class="p">(</span>
 
@@ -732,7 +806,9 @@
 
         <span class="nv">indented_example</span> <span class="o">=</span> <span class="nv">str</span><span class="ss">(</span><span class="nv">example</span><span class="ss">)</span>.<span class="nv">replace</span><span class="ss">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>, <span class="nv">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s">{indent_spaces}        </span><span class="s2">&quot;</span><span class="ss">)</span>
 
-        <span class="nv">function</span>.<span class="nv">__doc__</span> <span class="o">+=</span> <span class="nv">f</span><span class="s2">&quot;</span><span class="s">{indent_spaces}-</span><span class="se">\n</span><span class="s">{indent_spaces}        {indented_example}</span><span class="s2">&quot;</span>
+        <span class="nv">function</span>.<span class="nv">__doc__</span> <span class="o">+=</span> <span class="nv">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s">{indent_spaces}        {indented_example}</span><span class="s2">&quot;</span>
+
+        <span class="nv">function</span>.<span class="nv">__doc__</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s">-------</span><span class="s2">&quot;</span>
 
     <span class="nv">def</span> <span class="nv">example</span><span class="ss">(</span>
 

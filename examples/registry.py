@@ -27,7 +27,8 @@ class Examples:
             function.__doc__ += f"\n\n{indent_spaces}Examples:\n\n"
 
         indented_example = str(example).replace("\n", f"\n{indent_spaces}        ")
-        function.__doc__ += f"{indent_spaces}-\n{indent_spaces}        {indented_example}"
+        function.__doc__ += f"\n\n{indent_spaces}        {indented_example}"
+        function.__doc__ += "\n-------"
 
     def example(
         self,
