@@ -30,26 +30,37 @@ What's Missing:
 
 ## Quick Start
 
-The following guides should get you up and running with a documentation website in no time.
+The following guides should get you up and running using eXamples in no time.
 
-1. Install: `pip3 install examples`
-2. Add Examples:
+1. [Installation](https://timothycrosley.github.io/examples/docs/quick_start/1.-installation/) - TL;DR: Run `pip3 install examples` within your projects virtual environment.
+2. [Adding Examples](https://timothycrosley.github.io/examples/docs/quick_start/2.-adding-examples/) -
+    TL;DR: Add example decorators that represent each of your examples:
 
+        # my_module_with_examples.py
         from examples import example
 
         @example(1, 1, _example_returns=2)
         def add(number_1: int, number_2: int) -> int:
             return number_1 + number_2
 
-3. Verify and test examples
+3. [Verify and Test Examples](https://timothycrosley.github.io/portray/docs/quick_start/3.-testing-examples/) -
+    TL;DR: run `examples.verify_and_test_examples` within your projects test cases.
+
+        # test_my_module_with_examples.py
+        from examples import verify_and_test_examples
+
+        import my_module_with_examples
+
+
+        def test_examples_verifying_signature():
+            verify_and_test_examples(my_module_with_examples)
+
+4. Introspect Examples -
 
         import examples
 
-        examples.verify_and_test_all_examples()
+        from my_module_with_examples import add
 
-4. Introspect examples
-
-        import examples
 
         examples.get_examples(add)[0].use() == 2
 
