@@ -49,7 +49,7 @@ The following guides should get you up and running with a documentation website 
 
         import examples
 
-        examples.get(add)[0].use() == 2
+        examples.get_examples(add)[0].use() == 2
 
 ## Why Create Examples?
 
