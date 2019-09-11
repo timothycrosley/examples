@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "examples"
-version = "0.1.2"
+version = "1.0.0"
 description = "Tests and Documentation Done by Example."
 authors = ["Timothy Crosley <timothy.crosley@gmail.com>"]
 license = "MIT"
