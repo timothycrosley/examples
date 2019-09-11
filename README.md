@@ -43,7 +43,7 @@ The following guides should get you up and running using eXamples in no time.
         def add(number_1: int, number_2: int) -> int:
             return number_1 + number_2
 
-3. [Verify and Test Examples](https://timothycrosley.github.io/portray/docs/quick_start/3.-testing-examples/) -
+3. [Verify and Test Examples](https://timothycrosley.github.io/examples/docs/quick_start/3.-testing-examples/) -
     TL;DR: run `examples.verify_and_test_examples` within your projects test cases.
 
         # test_my_module_with_examples.py
