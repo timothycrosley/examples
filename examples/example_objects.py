@@ -3,7 +3,7 @@ import inspect
 from pprint import pformat
 from typing import Any, Callable, get_type_hints
 
-from pydantic import create_model
+from pydantic import BaseModel
 
 
 class NotDefined:
@@ -40,16 +40,17 @@ class CallableExample:
             typed_example_values = {}
             for parameter_name, parameter_value in bound.arguments.items():
                 type_hint = annotations.get(parameter_name, None)
-                test_type_hints[parameter_name] = (type_hint, None)
+                test_type_hints[parameter_name] = type_hint
                 typed_example_values[parameter_name] = parameter_value
 
             if self.returns is not NotDefined and "return" in annotations:
-                test_type_hints["return"] = annotations["return"]
+                test_type_hints["returns"] = annotations["return"]
                 typed_example_values["returns"] = self.returns
 
-            create_model(  # type: ignore
-                getattr(self.callable_object, "__name__", "ExamplesModel"), **test_type_hints
-            )(**typed_example_values)
+            class ExamplesModel(BaseModel):
+                __annotations__ = test_type_hints
+
+            ExamplesModel(**typed_example_values)
 
     def use(self) -> Any:
         """Runs the given example, giving back the result returned from running the example call."""
@@ -100,10 +101,11 @@ class CallableExample:
         if verify_return_type:
             type_hints = get_type_hints(self.callable_object)
             if type_hints and "return" in type_hints:
-                create_model(  # type: ignore
-                    getattr(self.callable_object, "__name__", "ExamplesModel"),
-                    returns=type_hints["return"],
-                )(returns=result)
+
+                class ExampleReturnsModel(BaseModel):
+                    __annotations__ = {"returns": type_hints["return"]}
+
+                ExampleReturnsModel(returns=result)
 
     def verify_and_test(self, verify_types: bool = True) -> None:
         self.verify_signature(verify_types=verify_types)
