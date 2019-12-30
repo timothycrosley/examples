@@ -11,7 +11,7 @@ from examples.api import (
 )
 from examples.registry import Examples
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __all__ = [
     "__version__",
     "add_example_to",
