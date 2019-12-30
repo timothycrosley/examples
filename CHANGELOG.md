@@ -17,6 +17,9 @@ see the [Installation QuickStart](https://timothycrosley.github.io/examples/docs
 
 Changelog
 =========
+## 1.0.1 - 30 December 2019
+- Updated pydantic supported versions.
+
 ## 1.0.1 - 15 September 2019
 - Improved type hint checking compatibility.
 
