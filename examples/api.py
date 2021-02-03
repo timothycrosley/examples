@@ -1,6 +1,6 @@
 from functools import singledispatch
 from types import FunctionType, ModuleType
-from typing import Any, Callable, List, Optional
+from typing import Any, Callable, List
 
 from examples import registry
 from examples.example_objects import CallableExample, NotDefined
