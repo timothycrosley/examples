@@ -2,8 +2,8 @@
 _________________
 
 [![PyPI version](https://badge.fury.io/py/examples.svg)](http://badge.fury.io/py/examples)
-[![Test Status](https://github.com/timothycrosley/examples/workflows/Test/badge.svg?branch=develop)](https://github.com/timothycrosley/examples/actions?query=workflow%3ATest)
-[![Lint Status](https://github.com/timothycrosley/examples/workflows/Lint/badge.svg?branch=develop)](https://github.com/timothycrosley/examples/actions?query=workflow%3ALint)
+[![Test Status](https://github.com/timothycrosley/examples/workflows/Test/badge.svg?branch=master)](https://github.com/timothycrosley/examples/actions?query=workflow%3ATest)
+[![Lint Status](https://github.com/timothycrosley/examples/workflows/Lint/badge.svg?branch=master)](https://github.com/timothycrosley/examples/actions?query=workflow%3ALint)
 [![codecov](https://codecov.io/gh/timothycrosley/examples/branch/master/graph/badge.svg)](https://codecov.io/gh/timothycrosley/examples)
 [![Join the chat at https://gitter.im/timothycrosley/examples](https://badges.gitter.im/timothycrosley/examples.svg)](https://gitter.im/timothycrosley/examples?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/examples/)
